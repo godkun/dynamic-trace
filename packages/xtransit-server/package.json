@@ -1,0 +1,41 @@
+{
+  "name": "@monitor/xtransit-server",
+  "version": "1.0.0",
+  "description": "server for xtransit",
+  "main": "dispatch.js",
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-xtransit-server --port=9090 --workers=4",
+    "stop": "egg-scripts stop --title=egg-server-xtransit-server",
+    "dev": "egg-bin dev --port=9096",
+    "lint": "eslint app config *.js --fix",
+    "autod": "autod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyj1991/xtransit-server.git"
+  },
+  "keywords": [
+    "xprofiler",
+    "easy-monitor",
+    "xtransit"
+  ],
+  "author": "yeekwanvong@gmail.com",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/hyj1991/xtransit-server/issues"
+  },
+  "homepage": "https://github.com/hyj1991/xtransit-server#readme",
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "egg-bin": "^4.19.0",
+    "eslint": "^7.0.0",
+    "eslint-config-egg": "^8.0.1"
+  },
+  "dependencies": {
+    "address": "^1.1.2",
+    "egg": "^2.35.0",
+    "egg-scripts": "^2.16.0",
+    "uuid": "^8.0.0",
+    "ws": "^7.3.0"
+  }
+}

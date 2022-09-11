@@ -1,0 +1,16 @@
+{
+  "name": "@monitor/monorepo",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "turbo": "turbo run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yangkun <godkun666@126.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.4.6"
+  }
+}

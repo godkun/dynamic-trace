@@ -1,0 +1,52 @@
+{
+  "name": "@monitor/xprofiler-console",
+  "version": "1.0.0",
+  "description": "console for xprofiler",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "egg": "^2.26.1",
+    "egg-mysql": "^3.0.0",
+    "egg-redis": "^2.4.0",
+    "egg-remote-config": "^1.0.1",
+    "egg-scripts": "^2.13.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "kitx": "^2.1.0",
+    "moment": "^2.25.3",
+    "p-map": "^4.0.0",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.14.1",
+    "egg-mock": "^4.0.0",
+    "eslint": "^7.0.0",
+    "eslint-config-egg": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-xprofiler-console --port=7443 --workers=4",
+    "stop": "egg-scripts stop --title=egg-server-xprofiler-console",
+    "dev": "egg-bin dev --port=8443",
+    "debug": "egg-bin debug",
+    "init-test-db": "db/init_unittest_db.sh",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "npm run init-test-db && egg-bin test",
+    "cov": "npm run init-test-db && egg-bin cov",
+    "lint": "eslint app config lib test --fix",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/X-Profiler/xprofiler-console.git"
+  },
+  "author": "yeekwanvong@gmail.com",
+  "license": "BSD-2-Clause"
+}
